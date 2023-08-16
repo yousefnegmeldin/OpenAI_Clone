@@ -22,7 +22,7 @@ const CreatePost = () => {
     if(form.prompt){
       try {
         setGeneratingImg(true);
-        const authorize = `Bearer ${process.env.EDEN_AI_API_KEY}`;
+        const authorize = `Bearer ${import.meta.env.VITE_EDEN_AI_API_KEY}`;
         const options = {
           method: 'POST',
           headers: {
